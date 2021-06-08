@@ -16,14 +16,16 @@ ORDER BY first_name
 
 ```
 SELECT
-	first_name,
+	  first_name,
     last_name,
     points,
     points * 10 + 100 AS "discount factor"
 FROM customers
 ```
 
-## Remove Duplicates with DISTINCT statement
+# DISTINCT statement
+
+Remove duplicates by using DISTINCT
 
 ```
 SELECT DISTINCT state
