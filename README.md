@@ -1,2 +1,3 @@
-# relationaldatabase
-Notes and code from SQL 
+# MySQL --> Relational Database
+
+Notes and SQL samples
