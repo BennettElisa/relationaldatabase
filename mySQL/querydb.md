@@ -97,3 +97,47 @@ FROM customers
 WHERE last_name NOT LIKE '%g' OR '%mac%
 
 ```
+
+# REGEXP Operator
+
+- Search for more complex patterns
+- ^ beginning of string (carrot)
+- $ end of string (dollar sign)
+- | pipe (represent logical or aka multiple search patterns)
+- [gim]e
+  - ge
+  - ie
+  - me
+- [a-h]e
+
+```
+
+SELECT *
+FROM customers
+<!-- WHERE last_name LIKE '%field%' -->
+WHERE last_name REGEXP 'field'
+
+
+
+SELECT *
+FROM customers
+<!-- find lastnames with the word that starts with field or has mac in the name -->
+WHERE last_name REGEXP '^field|mac'
+
+
+SELECT *
+FROM customers
+<!-- find lastnames ge, ie, or me in their last name -->
+WHERE last_name REGEXP '[gim]e'
+
+
+SELECT *
+FROM customers
+WHERE first_name REGEXP 'ELKA|AMBUR'
+last_name REGEXP 'EY$|ON$'
+<!-- last name should start with 'my' or contain 'se' -->
+last_name '^MY|se'
+last_name 'b[ru]'
+
+
+```
