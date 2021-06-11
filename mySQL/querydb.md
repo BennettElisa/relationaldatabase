@@ -64,3 +64,12 @@ WHERE quanity_in_stock IN (49,38,72)
 
 
 ```
+
+# BETWEEN Operator
+
+```
+SELECT *
+FROM proucts
+WHERE price BETWEEN 3000 AND 4000
+
+```
