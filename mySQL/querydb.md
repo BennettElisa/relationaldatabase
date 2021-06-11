@@ -69,7 +69,31 @@ WHERE quanity_in_stock IN (49,38,72)
 
 ```
 SELECT *
-FROM proucts
+FROM products
 WHERE price BETWEEN 3000 AND 4000
+
+```
+
+# LIKE Operator
+
+- Percent Sign
+  %g% --> g is anywhere in the word
+  g% --> g is at the beginning of the word
+  %mac --> 'mac' is at the end of the word
+
+- Underscore Sign
+  '_g' --> second character must be g
+  '_ \_ \_ \_ _ g' --> 6th character must be a g
+  'b _ \_ \_ y --> must start with b and end with y
+
+```
+
+SELECT *
+FROM customers
+WHERE last_name LIKE '%g' OR '%mac%
+
+SELECT *
+FROM customers
+WHERE last_name NOT LIKE '%g' OR '%mac%
 
 ```
