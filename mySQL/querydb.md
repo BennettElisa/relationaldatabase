@@ -27,3 +27,40 @@ Remove duplicates by using DISTINCT
 SELECT DISTINCT state
 FROM customers
 ```
+
+# WHERE statement
+
+- Dates are string
+- AND operators are evaluated first
+- OR operator is evaluated after AND
+- NOT operator
+
+```
+<>
+!=
+=
+<
+>
+>=
+<=
+
+WHERE state = "VA"
+WHERE birth_date > '1990-01-01' OR points > 100
+WHERE birth_date > '1990-01-01' OR (points > 100 AND state = 'VA')
+
+
+SELECT *
+FROM order_items
+WHERE order_id = 6 AND unit_price * quanity > 30
+
+// IN operator
+
+WHERE state IN ('VA', 'FL', 'GA')
+WHERE state  NOT IN ('VA', 'FL', 'GA')
+
+SELECT *
+FROM products
+WHERE quanity_in_stock IN (49,38,72)
+
+
+```
